@@ -108,7 +108,8 @@ public class ExerciseAnswers {
     public void joinLineRange() throws IOException {
         String output =
             reader.lines()
-                  .substream(2, 4)
+                  .skip(2)
+                  .limit(2)
                   .collect(joining());
         
         assertEquals(
